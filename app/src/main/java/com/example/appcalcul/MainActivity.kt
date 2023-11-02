@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var clear_btn: Button;
     private lateinit var back_btn: Button;
     private lateinit var equal_btn: Button;
+    private lateinit var dot_btn: Button;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,6 +57,7 @@ class MainActivity : AppCompatActivity() {
         clear_btn = findViewById(R.id.clean_btn) as Button
         back_btn = findViewById(R.id.back_btn) as Button
         equal_btn = findViewById(R.id.equal_btn) as Button
+        dot_btn = findViewById(R.id.dot_btn) as Button
 
         btn_0.setOnClickListener{setTextFields("0")}
         btn_1.setOnClickListener{setTextFields("1")}
@@ -73,6 +75,7 @@ class MainActivity : AppCompatActivity() {
         devide_btn.setOnClickListener{setTextFields("/")}
         bracket_open_btn.setOnClickListener{setTextFields("(")}
         bracket_close_btn.setOnClickListener{setTextFields(")")}
+        dot_btn.setOnClickListener{setTextFields(".")}
 
         clear_btn.setOnClickListener{
             math_operation.text = ""
